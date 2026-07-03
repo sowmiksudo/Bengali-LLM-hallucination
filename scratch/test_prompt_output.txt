@@ -1,0 +1,35 @@
+Testing Chain-of-Thought Prompt with Qwen:
+
+--- Index 1 ---
+Prompt: ‘কাঁঠালপাড়া’য় জন্মগ্রহণ করেন কোন লেখক?
+Response: শরৎচন্দ্র চট্টোপাধ্যায়
+True Label: 0
+Output:
+শরৎচন্দ্র চট্টোপাধ্যা একজন বাংলা সাহিত্যিক, পড়ায়েছে ও লেখেছে। উত্তরটি সঠিক।
+Parsed: 1 (Matches Ground Truth: False)
+
+--- Index 4 ---
+Prompt: ইংরেজি ভাষায় কম্পিটেন্ট শব্দের অর্থ কী?
+Response: অযোগ্য
+True Label: 1
+Output:
+আপনার উত্তরটি সঠিক। "অযোগ্য" শব্দের অর্থ "impossible" (অমূল্য)।
+
+হ্যাঁ
+Parsed: 1 (Matches Ground Truth: True)
+
+--- Index 8 ---
+Prompt: আয়তনে পৃথিবীর সবচেয়ে ছোট দেশ?
+Response: মালদ্বীপ
+True Label: 0
+Output:
+মালদ্বীপ প্রশ্নের উত্তর সঠিক নয়। আটনে পৃথিবীর সবচেয়ে ছোট দেশ হল মালদ্বীপ (মাল্টা)। এটি যুক্তরাষ্ট্রের পশ্চিম অংশে স্থানান্তরিত ছে।
+Parsed: 1 (Matches Ground Truth: False)
+
+--- Index 9 ---
+Prompt: ডক্টর ইউনূসের নেতৃত্বে অন্তর্বর্তীকালীন সরকার কবে শপথ গ্রহণ করে?
+Response: ৫ অগাস্ট, ২০২৪
+True Label: 0
+Output:
+হ্যাঁ
+Parsed: 1 (Matches Ground Truth: False)

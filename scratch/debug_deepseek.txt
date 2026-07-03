@@ -1,0 +1,112 @@
+Debugging raw DeepSeek-R1 responses:
+
+--- Sample 1 ---
+Prompt: "ধান্ধা" এর ভাবার্থ কী?
+Response: কোন অসৎ উদ্দেশ্য
+True Label: 1
+Raw Output:
+না
+Parsed: 0
+
+--- Sample 2 ---
+Prompt: ‘কাঁঠালপাড়া’য় জন্মগ্রহণ করেন কোন লেখক?
+Response: শরৎচন্দ্র চট্টোপাধ্যায়
+True Label: 0
+Raw Output:
+হ্যাঁ
+Parsed: 1
+
+--- Sample 3 ---
+Prompt: ৩০ থেকে ৪০ পর্যন্ত সংখ্যা থেকে যে কোন একটিকে ইচ্ছেমত নিলে সে সংখ্যাটি মৌলিক অথবা ৫ এর গুণিতক হওয়ার সম্ভাবনা কত?
+Response: ৬/১১
+True Label: 0
+Raw Output:
+না
+Parsed: 0
+
+--- Sample 4 ---
+Prompt: দুই অঙ্কবিশিষ্ট একটি সংখ্যার এককের অঙ্ক দশকের অঙ্ক অপেক্ষা ৩ বেশি। সংখ্যাটি এর অঙ্কদ্বয়ের সমষ্টির তিনগুণ অপেক্ষা ৪ বেশি। সংখ্যাটি কত?
+Response: ৪৭
+True Label: 0
+Raw Output:
+The problem involves finding a two-digit number where the units digit is three more than the tens digit, and the sum of the digits is four less than three times something. After analyzing various interpretations of "four less than three times," it appears that the intended condition might have been that the difference between three times the sum of the digits and the number itself equals four.
+
+By setting up the equations based on this interpretation:
+
+1. Let the tens digit be \( x \) and the units digit be \( y = x + 3 \).
+2. The number can be expressed as \( N = 10x + y = 10x + (x + 3) = 11x + 3 \).
+3. The sum of the digits is \( S = x + y = x + (x + 3) = 2x + 3 \).
+
+The condition given can be interpreted as:
+\[ |3S - N| = 4 \]
+
+Substituting \( S \) and \( N \):
+\[ |3(2x + 3) - (11x + 3)| = 4 \]
+\[ |6x + 9 - 11x - 3| = 4 \]
+\[ |-5x + 6| = 4 \]
+
+This leads to two possible equations:
+1. \( -5x + 6 = 4 \) → \( x = \frac{2}{5} \) (not an integer, so invalid)
+2. \( -5x + 6 = -4 \) → \( x = 2 \)
+
+For \( x = 2 \):
+- Tens digit \( x = 2 \)
+- Units digit \( y = 2 + 3 = 5 \)
+- Number \( N = 10(2) + 5 = 25 \)
+- Sum of digits \( S = 2 + 5 = 7 \)
+
+Checking the condition:
+\[ |3S - N| = |3(7) - 25| = |21 - 25| = 4 \]
+
+Thus, the correct answer is **25**.
+Parsed: 0
+
+--- Sample 5 ---
+Prompt: ইংরেজি ভাষায় কম্পিটেন্ট শব্দের অর্থ কী?
+Response: অযোগ্য
+True Label: 1
+Raw Output:
+Error: llama-server chat error: map[code:500 message:The model produced output that does not match the expected peg-native format type:server_error] (status code: 500)
+Parsed: 0
+
+--- Sample 6 ---
+Prompt: কোন মুঘল সম্রাট বাংলার নাম দেন ‘জান্নাতাবাদ’?
+Response: হুমায়ুন
+True Label: 1
+Raw Output:
+না
+Parsed: 0
+
+--- Sample 7 ---
+Prompt: নিচের কোন বানানটি শুদ্ধ? ক) মনিষি, খ) মনীষী, গ) মনিষী, ঘ) মনীষী
+Response: ক)
+True Label: 0
+Raw Output:
+ন
+
+ক) মনিষি
+Parsed: 0
+
+--- Sample 8 ---
+Prompt: সমাস ভাষাকে কি করে?
+Response: সংক্ষেপ করে
+True Label: 1
+Raw Output:
+না
+Parsed: 0
+
+--- Sample 9 ---
+Prompt: আয়তনে পৃথিবীর সবচেয়ে ছোট দেশ?
+Response: মালদ্বীপ
+True Label: 0
+Raw Output:
+Error: llama-server chat error: map[code:500 message:The model produced output that does not match the expected peg-native format type:server_error] (status code: 500)
+Parsed: 0
+
+--- Sample 10 ---
+Prompt: ডক্টর ইউনূসের নেতৃত্বে অন্তর্বর্তীকালীন সরকার কবে শপথ গ্রহণ করে?
+Response: ৫ অগাস্ট, ২০২৪
+True Label: 0
+Raw Output:
+না
+Parsed: 0
